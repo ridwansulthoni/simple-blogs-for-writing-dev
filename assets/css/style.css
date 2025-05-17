@@ -1,0 +1,264 @@
+@font-face {
+    font-family: Recursive;
+    src: url(../font/Recursive/Recursive-VariableFont_CASL\,CRSV\,MONO\,slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../font/Poppins/Poppins-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    background-color: #232830;
+}
+
+.navbar {
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    width: 95%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.navbar .logo {
+    float: left;
+    font-size: 30px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+.navbar .logo a {
+    color: #ffffffff;
+    text-decoration: none;
+}
+
+.navbar .navigation {
+    float: right;
+}
+
+.navbar .navigation li {
+    float: right;
+    font-size: 24px;
+    font-family: Poppins;
+    font-weight: 400;
+    display: block;
+    margin-left: 20px;
+}
+
+.navbar .navigation li a {
+    color: #ffffffff;
+    text-decoration: none;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 54px;
+    padding: 0;
+}
+
+.page-header .logo-header {
+    margin-top: 2em;
+}
+
+.page-header .title-header {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 71px;
+    font-family: 'Recursive';
+    font-style: italic;
+    font-weight: 400;
+    color: #FF7575;
+}
+
+.page-header .subtitle-header {
+    margin-top: 0.3em;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 29px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.category-nav {
+    border-top: 1px solid #4D4D4D;
+}
+
+.category-nav .icon {
+    float: left;
+    margin-top: 20px;
+}
+
+.category-nav .icon img {
+    margin-left: 10px;
+}
+
+.category-nav .category-listing li {
+    float: right;
+    font-size: 27px;
+    font-family: 'Recursive';
+    font-weight: 400;
+    font-style: italic;
+    display: block;
+    margin-right: 40px;
+}
+
+.category-nav .category-listing li a {
+    color: #909090;
+    text-decoration: none;
+}
+
+.blur {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.blur::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 50px;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #232830);
+    pointer-events: none;
+}
+
+.articles {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.articles-listing {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Poppins';
+    color: #0F1217;
+}
+
+.articles .card {
+    border: 1px solid #000000;
+    width: 370px;
+    height: 410px;
+    background-color: #ffffff;
+    border-radius: 22px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.articles .card img {
+    padding: 15px 15px 0 15px;
+    margin-bottom: 20px;
+}
+
+.articles .card .card-content {
+    display: flex;
+    flex-direction: column;
+    height: 43%;
+    padding: 16px;
+}
+
+.articles .card .card-content h3 {
+    font-size: 19px;
+    margin: 0;
+}
+
+.articles .card .card-content p {
+    margin-block-start: auto;
+    margin-block-end: auto;
+    line-height: 1.5;
+}
+
+.articles .card .footer-card-content {
+    margin-top: auto;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.articles .card .footer-card-content span {
+    width: 3px;
+    height: 3px;
+    background-color: #0F1217;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'Recursive';
+    font-style: italic;
+    font-weight: 400;
+}
+
+.pagination ul {
+    display: flex;
+}
+
+.pagination li {
+    display: block;
+    margin: 10px;
+}
+
+.pagination li a {
+    color: #FF7575;
+    float: center;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination li a.active {
+    border-top: 3px solid #FF7575;
+    font-weight: 800;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #4D4D4D;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-family: 'Poppins';
+}
+
+.left {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.left span {
+    margin-left: 10px;
+}
+
+.right {
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 60px;
+}
+
+.button {
+    color: #FFFFFF;
+    background-color: #4699E0;
+    border-radius: 5px;
+    font-size: 19px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    padding: 7px;
+}
