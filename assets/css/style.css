@@ -8,28 +8,28 @@
     src: url(../font/Poppins/Poppins-Regular.ttf);
 }
 
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     background-color: #232830;
 }
 
 .navbar {
-    width: 100%;
-    overflow: hidden;
-}
-
-.container {
-    width: 95%;
-    overflow: hidden;
-    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 26px;
 }
 
 .navbar .logo {
-    float: left;
     font-size: 30px;
     font-family: 'Poppins';
-    font-weight: 400;
-    margin-top: 12px;
+    font-weight: 600;
 }
 
 .navbar .logo a {
@@ -38,16 +38,15 @@ body {
 }
 
 .navbar .navigation {
-    float: right;
+    display: flex;
 }
 
 .navbar .navigation li {
-    float: right;
     font-size: 24px;
-    font-family: Poppins;
-    font-weight: 400;
+    font-family: 'Poppins';
+    font-weight: 300;
     display: block;
-    margin-left: 20px;
+    margin-left: 18px;
 }
 
 .navbar .navigation li a {
@@ -57,50 +56,54 @@ body {
 
 .page-header {
     text-align: center;
-    margin-bottom: 54px;
-    padding: 0;
+    margin: 48px 0;
 }
 
 .page-header .logo-header {
-    margin-top: 2em;
+    margin-bottom: 18px;
 }
 
 .page-header .title-header {
-    margin-top: 0.5em;
-    margin-bottom: 0;
-    padding: 0;
-    font-size: 71px;
+    font-size: 68px;
     font-family: 'Recursive';
     font-style: italic;
-    font-weight: 400;
+    font-weight: 500;
     color: #FF7575;
+    margin-bottom: 16px;
 }
 
 .page-header .subtitle-header {
-    margin-top: 0.3em;
-    margin-bottom: 0;
-    padding: 0;
-    font-size: 29px;
+    font-size: 28px;
     font-family: 'Poppins';
     font-weight: 400;
     color: #ffffff;
 }
 
-.category-nav {
-    border-top: 1px solid #4D4D4D;
+main {
+    display: flex;
+    flex-direction: column;
 }
 
-.category-nav .icon {
-    float: left;
-    margin-top: 20px;
+.category-nav {
+    border-top: 1px solid #4D4D4D;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 14px;
+    position: relative;
 }
 
 .category-nav .icon img {
-    margin-left: 10px;
+    margin-left: 14px;
+}
+
+.category-listing {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .category-nav .category-listing li {
-    float: right;
     font-size: 27px;
     font-family: 'Recursive';
     font-weight: 400;
@@ -133,27 +136,26 @@ body {
 }
 
 .articles {
-    margin-top: 100px;
-    margin-bottom: 50px;
-    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .articles-listing {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 42px;
     font-family: 'Poppins';
     color: #0F1217;
+    margin: 34px 64px;
 }
 
 .articles .card {
-    border: 1px solid #000000;
     width: 370px;
     height: 410px;
     background-color: #ffffff;
     border-radius: 22px;
-    margin: 10px 0 10px 20px;
-    display: flex;
-    flex-direction: column;
+    position: relative;
 }
 
 .articles .card img {
@@ -162,27 +164,24 @@ body {
 }
 
 .articles .card .card-content {
-    display: flex;
-    flex-direction: column;
-    height: 43%;
-    padding: 16px;
+    padding: 0 20px;
 }
 
 .articles .card .card-content h3 {
-    font-size: 19px;
-    margin: 0;
+    font-size: 20px;
+    margin-bottom: 6px;
 }
 
 .articles .card .card-content p {
-    margin-block-start: auto;
-    margin-block-end: auto;
+    margin-bottom: 6px;
     line-height: 1.5;
 }
 
 .articles .card .footer-card-content {
-    margin-top: auto;
+    position: absolute;
     font-size: 16px;
     font-weight: 600;
+    bottom: 10px;
 }
 
 .articles .card .footer-card-content span {
@@ -231,6 +230,7 @@ body {
 footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-top: 1px solid #4D4D4D;
     color: #FFFFFF;
     font-size: 30px;
@@ -238,8 +238,9 @@ footer {
 }
 
 .left {
-    display: inline-block;
-    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 20px 40px;
 }
 
 .left span {
@@ -247,9 +248,7 @@ footer {
 }
 
 .right {
-    display: inline-block;
-    margin-top: 30px;
-    margin-right: 60px;
+    margin: 20px 40px 20px;
 }
 
 .button {
@@ -259,6 +258,55 @@ footer {
     font-size: 19px;
     border: none;
     text-decoration: none;
-    display: inline-block;
-    padding: 7px;
+    padding: 10px 20px;
+}
+
+@media (max-width: 1200px) {
+    .category-nav .icon {
+        position: absolute;
+        top: 14px;
+        right: 10px;
+    }
+
+    .category-listing {
+        display: none;
+    }
+}
+
+@media (max-width: 781px) {
+    .articles-listing {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pagination {
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 25px;
+    }
+
+    .button {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:680px) {
+    .articles-listing {
+        grid-template-columns: 1fr;
+    }
+
+    .pagination {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+
+    .button {
+        font-size: 12px;
+    }
+
+
 }
